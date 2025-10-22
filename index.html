@@ -3,926 +3,624 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sanjai Pathak, PhD | AI, Quantum ML & High-Performance Computing</title>
-    <meta name="description" content="Sanjai Pathak - Country Head at GNS Systems GmbH. Research in AI, Quantum Machine Learning, and High-Performance Computing for automotive electronics.">
-    <meta name="keywords" content="Sanjai Pathak, Quantum Machine Learning, AI, HPC, Automotive Electronics, ADAS, Research">
+    <title>Sanjai Pathak, PhD | AI, Quantum ML & Engineering Leadership</title>
+    <meta name="description" content="Sanjai Pathak - Bridging German precision with Indian innovation. Country Head at GNS Systems GmbH, leading AI and HPC initiatives in automotive electronics.">
     <link rel="canonical" href="https://sanpatha.com/">
     
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Sanjai Pathak, PhD — AI, Quantum ML & High-Performance Computing">
-    <meta property="og:description" content="Country Head at GNS Systems GmbH. Research in AI, Quantum Machine Learning, and HPC for automotive electronics.">
-    <meta property="og:url" content="https://sanpatha.com/">
-    
-    <!-- Schema.org -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Person",
-          "@id": "https://sanpatha.com/#person",
-          "name": "Sanjai Pathak",
-          "honorificPrefix": "Dr.",
-          "jobTitle": "Country Head - Electronics Business, India",
-          "worksFor": {
-            "@type": "Organization",
-            "name": "GNS Systems GmbH",
-            "url": "https://gns-systems.com"
-          },
-          "url": "https://sanpatha.com/",
-          "sameAs": [
-            "https://www.linkedin.com/in/sanjai-pathak/",
-            "https://scholar.google.com/citations?user=hkGVZXIAAAAJ&hl=en",
-            "https://medium.com/@pathak.sanjai"
-          ],
-          "email": "pathak.sanjai@gmail.com",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Pune",
-            "addressRegion": "Maharashtra",
-            "addressCountry": "IN"
-          }
-        },
-        {
-          "@type": "ScholarlyArticle",
-          "headline": "Quantum Inspired Chaotic Salp Swarm Optimization for Dynamic Optimization",
-          "author": [{"@id": "https://sanpatha.com/#person"}],
-          "datePublished": "2024",
-          "publisher": {
-            "@type": "Organization",
-            "name": "AGH University - Computer Science Journal"
-          }
-        }
-      ]
-    }
-    </script>
-    
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
         :root {
-            --bg-primary: #f9f8f6;
-            --bg-secondary: #ffffff;
-            --bg-accent: #f3f2f0;
-            --text-primary: #2a2a2a;
-            --text-secondary: #666666;
-            --text-tertiary: #999999;
-            --accent: #2c5f6f;
-            --accent-warm: #a67c52;
-            --border: #e5e4e2;
-            --shadow: rgba(0, 0, 0, 0.06);
+            --primary: #2c5f6f;
+            --text: #333;
+            --text-light: #666;
+            --bg: #fafafa;
+            --card: #ffffff;
+            --border: #e5e5e5;
         }
-
-        [data-theme="dark"] {
-            --bg-primary: #1a1a1a;
-            --bg-secondary: #222222;
-            --bg-accent: #2a2a2a;
-            --text-primary: #e5e5e5;
-            --text-secondary: #b3b3b3;
-            --text-tertiary: #808080;
-            --accent: #4a9ead;
-            --accent-warm: #c9a266;
-            --border: #333333;
-            --shadow: rgba(0, 0, 0, 0.4);
-        }
-
+        
         body {
-            font-family: 'Georgia', 'Palatino', serif;
-            background: var(--bg-primary);
-            color: var(--text-primary);
-            line-height: 1.65;
-            transition: all 0.3s;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--bg);
         }
-
-        h1, h2, h3, h4 {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            font-weight: 400;
-            letter-spacing: -0.015em;
-        }
-
-        /* Accessibility: Skip link */
-        .skip-link {
-            position: absolute;
-            left: -999px;
-            top: auto;
-            width: 1px;
-            height: 1px;
-            overflow: hidden;
-        }
-
-        .skip-link:focus {
-            left: 8px;
-            top: 8px;
-            width: auto;
-            height: auto;
-            padding: 0.5rem 0.75rem;
-            background: #000;
-            color: #fff;
-            border-radius: 4px;
-            z-index: 9999;
-        }
-
-        /* Nav */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: var(--bg-secondary);
-            border-bottom: 1px solid var(--border);
-            z-index: 1000;
-        }
-
-        .nav-container {
-            max-width: 1100px;
+        
+        .container {
+            max-width: 900px;
             margin: 0 auto;
-            padding: 1.3rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1rem;
-            font-weight: 500;
-            color: var(--text-primary);
-            letter-spacing: 0.08em;
-            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2.2rem;
-            align-items: center;
-        }
-
-        .nav-links a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-            font-size: 0.9rem;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--accent);
-        }
-
-        .theme-toggle {
-            background: none;
-            border: none;
-            color: var(--text-secondary);
-            cursor: pointer;
-            font-size: 1.1rem;
-            padding: 0.5rem;
-        }
-
-        .nav-toggle {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.3rem;
-            color: var(--text-secondary);
-            cursor: pointer;
-        }
-
-        /* Hero */
-        .hero {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 9rem 2rem 5rem;
-            display: grid;
-            grid-template-columns: 1.8fr 1fr;
-            gap: 3.5rem;
-            align-items: center;
-        }
-
-        .hero h1 {
-            font-size: 2.6rem;
-            font-weight: 300;
-            line-height: 1.25;
-            margin-bottom: 1.3rem;
-        }
-
-        .hero-subtitle {
-            font-size: 1.1rem;
-            color: var(--accent);
-            margin-bottom: 1.8rem;
-            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-            font-weight: 400;
-        }
-
-        .hero-bio {
-            font-size: 1.05rem;
-            line-height: 1.75;
-            color: var(--text-secondary);
-            margin-bottom: 2rem;
-        }
-
-        .hero-links {
-            display: flex;
-            gap: 1.2rem;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 0.85rem 1.6rem;
-            background: var(--accent);
-            color: white;
-            text-decoration: none;
-            border-radius: 3px;
-            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-            font-size: 0.9rem;
-            transition: all 0.3s;
-        }
-
-        .btn:hover {
-            background: var(--accent-warm);
-        }
-
-        .btn-secondary {
-            background: var(--bg-accent);
-            color: var(--text-primary);
-            border: 1px solid var(--border);
-        }
-
-        .btn-secondary:hover {
-            background: var(--bg-secondary);
-        }
-
-        .hero-image img {
-            width: 100%;
-            max-width: 320px;
-            border-radius: 6px;
-            box-shadow: 0 15px 35px var(--shadow);
-        }
-
-        /* Section */
-        section {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 4.5rem 2rem;
-        }
-
-        .section-title {
-            font-size: 2rem;
-            font-weight: 300;
-            margin-bottom: 2.5rem;
-            color: var(--text-primary);
-        }
-
-        /* Work */
-        .work-list {
-            display: flex;
-            flex-direction: column;
-            gap: 2.5rem;
-        }
-
-        .work-item {
-            background: var(--bg-secondary);
-            padding: 2.2rem;
-            border-radius: 6px;
-            border: 1px solid var(--border);
-        }
-
-        .work-item h3 {
-            font-size: 1.3rem;
-            margin-bottom: 0.4rem;
-            font-weight: 400;
-        }
-
-        .work-meta {
-            font-size: 0.9rem;
-            color: var(--accent-warm);
-            margin-bottom: 1rem;
-            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-        }
-
-        .work-item p {
-            color: var(--text-secondary);
-            line-height: 1.7;
-        }
-
-        /* Projects */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .project-card {
-            background: var(--bg-secondary);
             padding: 2rem;
-            border-radius: 6px;
-            border: 1px solid var(--border);
-            transition: all 0.3s;
         }
-
-        .project-card:hover {
-            box-shadow: 0 10px 30px var(--shadow);
-            transform: translateY(-3px);
+        
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 2px solid var(--border);
+            margin-bottom: 3rem;
         }
-
-        .project-card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 0.7rem;
-            font-weight: 400;
-        }
-
-        .project-card p {
-            color: var(--text-secondary);
-            line-height: 1.65;
-            font-size: 0.95rem;
-        }
-
-        /* Publications */
-        .publications-list {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .publication {
-            background: var(--bg-secondary);
-            padding: 1.8rem;
-            border-radius: 6px;
-            border-left: 3px solid var(--accent);
-        }
-
-        .pub-title {
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-        }
-
-        .pub-journal {
-            color: var(--accent);
-            font-style: italic;
-            margin-bottom: 0.3rem;
-        }
-
-        .pub-meta {
-            font-size: 0.85rem;
-            color: var(--text-tertiary);
-            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-        }
-
-        /* Writing */
-        .writing-list {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        .article {
-            background: var(--bg-secondary);
-            padding: 2rem;
-            border-radius: 6px;
-            border: 1px solid var(--border);
-        }
-
-        .article h3 {
-            font-size: 1.2rem;
-            margin-bottom: 0.7rem;
-            font-weight: 400;
-        }
-
-        .article-excerpt {
-            color: var(--text-secondary);
-            line-height: 1.65;
-            margin-bottom: 1rem;
-        }
-
-        .read-link {
-            color: var(--accent);
-            text-decoration: none;
-            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-            font-size: 0.9rem;
-        }
-
-        /* Contact */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1.2fr;
-            gap: 3rem;
-        }
-
-        .contact-info {
-            background: var(--bg-secondary);
-            padding: 2.5rem;
-            border-radius: 6px;
-            border: 1px solid var(--border);
-        }
-
-        .contact-photo {
-            width: 100px;
-            height: 100px;
+        
+        .photo {
+            width: 140px;
+            height: 140px;
             border-radius: 50%;
-            margin-bottom: 1.5rem;
-            object-fit: cover;
-            border: 3px solid var(--accent);
-        }
-
-        .contact-info h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.8rem;
-            font-weight: 400;
-        }
-
-        .contact-message {
-            font-size: 1rem;
-            line-height: 1.7;
-            color: var(--text-secondary);
-            margin-bottom: 1.5rem;
-        }
-
-        .contact-detail {
-            margin-bottom: 0.8rem;
-            color: var(--text-primary);
-            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-            font-size: 0.95rem;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 0.8rem;
-            margin-top: 1.5rem;
-        }
-
-        .social-link {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: var(--bg-accent);
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(135deg, var(--primary), #3a7080);
             display: flex;
             align-items: center;
             justify-content: center;
+            font-size: 3.5rem;
+            color: white;
+            font-weight: 600;
+            box-shadow: 0 4px 20px rgba(44, 95, 111, 0.2);
+        }
+        
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            color: var(--primary);
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        .role {
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+        
+        /* Summary */
+        .summary {
+            background: var(--card);
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary);
+            margin-bottom: 3rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .summary p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--text-light);
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .stat {
+            text-align: center;
+            padding: 1rem;
+            background: var(--bg);
+            border-radius: 6px;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-top: 0.3rem;
+        }
+        
+        /* Sections */
+        .section {
+            margin-bottom: 3rem;
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .section-icon {
+            font-size: 1.8rem;
+        }
+        
+        /* Experience */
+        .experience-item {
+            background: var(--card);
+            padding: 1.8rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border-left: 3px solid var(--primary);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 0.8rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .experience-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+        
+        .experience-period {
+            font-size: 0.9rem;
+            color: var(--primary);
+            font-weight: 500;
+        }
+        
+        .experience-company {
+            font-size: 1rem;
+            color: var(--text-light);
+            margin-bottom: 0.8rem;
+        }
+        
+        .experience-desc {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+        
+        /* Links Grid */
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        
+        .link-card {
+            background: var(--card);
+            padding: 1.5rem;
+            border-radius: 8px;
             text-decoration: none;
+            color: var(--text);
+            transition: all 0.3s;
+            border: 2px solid var(--border);
+            display: flex;
+            align-items: start;
+            gap: 1rem;
+        }
+        
+        .link-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-color: var(--primary);
+        }
+        
+        .link-icon {
+            font-size: 2rem;
+            min-width: 40px;
+        }
+        
+        .link-content {
+            flex: 1;
+        }
+        
+        .link-title {
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+            font-size: 1.05rem;
+        }
+        
+        .link-desc {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        
+        .link-count {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+        
+        /* Publications */
+        .publication {
+            background: var(--card);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            border-left: 3px solid var(--primary);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .pub-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+            line-height: 1.5;
+        }
+        
+        .pub-venue {
+            color: var(--primary);
+            font-style: italic;
+            font-size: 0.95rem;
+            margin-bottom: 0.3rem;
+        }
+        
+        .pub-meta {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+        
+        /* Writing */
+        .article-card {
+            background: var(--card);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            display: block;
+            transition: all 0.3s;
+        }
+        
+        .article-card:hover {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transform: translateX(5px);
+        }
+        
+        .article-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+        
+        .article-excerpt {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 0.8rem;
+        }
+        
+        .read-more {
+            color: var(--primary);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+        
+        /* Contact */
+        .contact-section {
+            background: linear-gradient(135deg, var(--primary), #3a7080);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+        
+        .contact-section h2 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-text {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        
+        .contact-email {
+            display: inline-block;
+            background: white;
+            color: var(--primary);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
             font-size: 1.1rem;
             transition: all 0.3s;
         }
-
-        .social-link:hover {
-            background: var(--accent);
-            color: white;
+        
+        .contact-email:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
         }
-
-        /* Form */
-        .contact-form {
-            background: var(--bg-secondary);
-            padding: 2.5rem;
-            border-radius: 6px;
-            border: 1px solid var(--border);
-        }
-
-        .form-group {
-            margin-bottom: 1.3rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.4rem;
-            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.8rem;
-            border: 1px solid var(--border);
-            border-radius: 3px;
-            background: var(--bg-primary);
-            color: var(--text-primary);
-            font-family: inherit;
-            font-size: 0.95rem;
-        }
-
-        .form-group textarea {
-            min-height: 130px;
-            resize: vertical;
-        }
-
-        .submit-btn {
-            width: 100%;
-            padding: 0.9rem;
-            background: var(--accent);
-            color: white;
-            border: none;
-            border-radius: 3px;
-            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-            font-size: 0.95rem;
-            cursor: pointer;
-        }
-
-        .submit-btn:hover {
-            background: var(--accent-warm);
-        }
-
-        #formStatus {
-            margin-top: 1rem;
-            font-size: 0.9rem;
-            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-        }
-
+        
         /* Footer */
         footer {
             text-align: center;
-            padding: 2.5rem 2rem;
+            padding: 2rem 0;
+            color: var(--text-light);
+            font-size: 0.9rem;
             border-top: 1px solid var(--border);
-            color: var(--text-tertiary);
-            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-            font-size: 0.85rem;
+            margin-top: 3rem;
         }
-
-        /* Mobile nav */
-        #mobileNav {
-            display: none;
-            padding: 1rem 2rem;
-        }
-
-        #mobileNav a {
-            display: block;
-            padding: 0.7rem 0;
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-        }
-
+        
         /* Responsive */
-        @media (max-width: 768px) {
-            .hero {
-                grid-template-columns: 1fr;
-                padding-top: 7rem;
-            }
-
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .nav-links {
-                display: none;
-            }
-
-            .nav-toggle {
-                display: block;
-            }
-
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        html {
-            scroll-behavior: smooth;
+        @media (max-width: 600px) {
+            h1 { font-size: 1.8rem; }
+            .tagline { font-size: 1rem; }
+            .stats { grid-template-columns: 1fr; }
+            .experience-header { flex-direction: column; }
+            .links-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
-<body data-theme="light">
-    <!-- Accessibility -->
-    <a href="#main" class="skip-link">Skip to main content</a>
-
-    <!-- Nav -->
-    <nav role="navigation" aria-label="Primary navigation">
-        <div class="nav-container">
-            <div class="logo">SANJAI PATHAK</div>
-            <div class="nav-links">
-                <a href="#work">Work</a>
-                <a href="#projects">Projects</a>
-                <a href="#publications">Publications</a>
-                <a href="#writing">Writing</a>
-                <a href="#contact">Contact</a>
-                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">◐</button>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="photo">SP</div>
+            <h1>Sanjai Pathak, PhD</h1>
+            <div class="tagline">Bridging German Precision with Indian Innovation</div>
+            <div class="role">Country Head - Electronics Business, India | GNS Systems GmbH</div>
+        </header>
+        
+        <!-- Summary -->
+        <div class="summary">
+            <p>
+                Leading cross-continental engineering teams in AI, Quantum Machine Learning, and High-Performance 
+                Computing for automotive electronics. Nineteen years transforming how global organizations approach 
+                ADAS, cockpit systems, and software-defined vehicles.
+            </p>
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-number">19+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">150+</div>
+                    <div class="stat-label">Team Members Led</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">€75M+</div>
+                    <div class="stat-label">Business Value</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">14+</div>
+                    <div class="stat-label">Publications</div>
+                </div>
             </div>
-            <button id="navToggle" class="nav-toggle" aria-label="Toggle menu">☰</button>
         </div>
-        <div id="mobileNav">
-            <a href="#work">Work</a>
-            <a href="#projects">Projects</a>
-            <a href="#publications">Publications</a>
-            <a href="#writing">Writing</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
-
-    <main id="main">
-        <!-- Hero -->
-        <section class="hero">
-            <div>
-                <h1>Connecting precision with innovation across continents</h1>
-                <div class="hero-subtitle">Country Head, Electronics Business (India) — GNS Systems GmbH</div>
-                <div class="hero-bio">
-                    Nineteen years building teams, systems, and partnerships in AI, quantum machine learning, and 
-                    high-performance computing. Currently bridging German engineering rigor with Indian innovation 
-                    capabilities in automotive electronics and next-generation engineering solutions.
+        
+        <!-- Current Role Highlight -->
+        <section class="section">
+            <h2 class="section-title">
+                <span class="section-icon">💼</span>
+                Current Focus
+            </h2>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="experience-title">Country Head - Electronics Business, India</div>
+                    <div class="experience-period">Jan 2025 - Present</div>
                 </div>
-                <div class="hero-links">
-                    <a href="#contact" class="btn">Get in Touch</a>
-                    <a href="https://scholar.google.com/citations?user=hkGVZXIAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Research</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='400'%3E%3Crect fill='%23d4d3d1' width='320' height='400'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='14' fill='%23666'%3EYour Photo%3C/text%3E%3C/svg%3E" alt="Sanjai Pathak" loading="lazy">
-            </div>
-        </section>
-
-        <!-- Work -->
-        <section id="work">
-            <h2 class="section-title">Work</h2>
-            <div class="work-list">
-                <div class="work-item">
-                    <h3>GNS Systems GmbH</h3>
-                    <div class="work-meta">2025 — Present</div>
-                    <p>
-                        Leading India operations for engineering intelligence, simulation data management, and 
-                        AI-driven solutions. Established cross-continental collaboration frameworks for automotive 
-                        and electronics sectors, driving global business development for AI-powered Data Context Hub 
-                        platform and managing distributed HPC delivery portfolios.
-                    </p>
-                </div>
-                <div class="work-item">
-                    <h3>Faurecia Clarion Electronics</h3>
-                    <div class="work-meta">2020 — 2024</div>
-                    <p>
-                        Led In-Vehicle Electronics R&D division managing 150+ engineers across cockpit electronics, 
-                        ADAS, displays, and infotainment systems. Oversaw business valued at €75 million, pioneered 
-                        advanced software development teams, and led innovation in Miracast technology and platform 
-                        development.
-                    </p>
-                </div>
-                <div class="work-item">
-                    <h3>KPIT Technologies</h3>
-                    <div class="work-meta">2018 — 2020</div>
-                    <p>
-                        Program and account management for automotive embedded systems. Led cross-functional teams 
-                        across India and USA developing engineering tools, consistently achieving highest customer 
-                        satisfaction ratings.
-                    </p>
-                </div>
-                <div class="work-item">
-                    <h3>HCL Technologies</h3>
-                    <div class="work-meta">2011 — 2018</div>
-                    <p>
-                        Designed complete battery management systems for professional cameras. Implemented agile 
-                        methodologies across projects, introduced pair programming reducing defect density by 12%, 
-                        and led bridge engineering efforts in Japan region.
-                    </p>
+                <div class="experience-company">GNS Systems GmbH (Germany)</div>
+                <div class="experience-desc">
+                    Leading India operations for engineering intelligence, simulation data management, and AI-driven 
+                    HPC solutions. Driving global business development for AI-powered Data Context Hub platform. 
+                    Managing distributed teams across automotive electronics and software-defined vehicle domains.
                 </div>
             </div>
         </section>
-
-        <!-- Projects -->
-        <section id="projects">
-            <h2 class="section-title">Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>Quantum-Inspired Optimization</h3>
-                    <p>
-                        Developed QESSO, SA-SSO, and MMQSSA algorithms combining quantum computing principles 
-                        with swarm intelligence for dynamic optimization problems in software-defined vehicular networks.
-                    </p>
-                </div>
-                <div class="project-card">
-                    <h3>Engineering Intelligence Platform</h3>
-                    <p>
-                        Architecting knowledge graph-based workflows connecting engineering data, simulation, and 
-                        validation through AI for enhanced traceability and efficiency across global automotive projects.
-                    </p>
-                </div>
-                <div class="project-card">
-                    <h3>ADAS & Autonomous Systems</h3>
-                    <p>
-                        Development of Advanced Driver Assistance Systems integrating sensor fusion, real-time 
-                        processing, and HPC solutions for predictive maintenance and enhanced vehicle safety.
-                    </p>
-                </div>
-                <div class="project-card">
-                    <h3>Cockpit Electronics</h3>
-                    <p>
-                        Led development of cockpit systems including displays, infotainment platforms, and 
-                        software integration for major automotive OEMs, managing full product lifecycle from 
-                        requirements to production.
-                    </p>
-                </div>
-                <div class="project-card">
-                    <h3>Camera Embedded Systems</h3>
-                    <p>
-                        Designed complete battery management and middleware solutions for professional DSLR cameras, 
-                        focusing on power optimization and user experience through full development lifecycle.
-                    </p>
-                </div>
-                <div class="project-card">
-                    <h3>Academic Advisory</h3>
-                    <p>
-                        Area Advisory Board member at Amity University, supporting curriculum development in 
-                        innovation and entrepreneurship to shape next-generation technology talent.
-                    </p>
-                </div>
+        
+        <!-- Research & Publications -->
+        <section class="section">
+            <h2 class="section-title">
+                <span class="section-icon">🎓</span>
+                Research & Publications
+            </h2>
+            <div class="links-grid">
+                <a href="https://scholar.google.com/citations?user=hkGVZXIAAAAJ&hl=en" target="_blank" class="link-card">
+                    <div class="link-icon">📚</div>
+                    <div class="link-content">
+                        <div class="link-title">Google Scholar</div>
+                        <div class="link-desc">Quantum ML, AI, Swarm Intelligence</div>
+                        <span class="link-count">14+ Publications</span>
+                    </div>
+                </a>
+                
+                <a href="https://orcid.org/" target="_blank" class="link-card">
+                    <div class="link-icon">🆔</div>
+                    <div class="link-content">
+                        <div class="link-title">ORCID Profile</div>
+                        <div class="link-desc">Verified research identity</div>
+                    </div>
+                </a>
+                
+                <a href="https://www.researchgate.net/" target="_blank" class="link-card">
+                    <div class="link-icon">🔬</div>
+                    <div class="link-content">
+                        <div class="link-title">ResearchGate</div>
+                        <div class="link-desc">Papers & collaboration network</div>
+                    </div>
+                </a>
             </div>
-        </section>
-
-        <!-- Publications -->
-        <section id="publications">
-            <h2 class="section-title">Publications</h2>
-            <div class="publications-list">
+            
+            <div style="margin-top: 2rem;">
+                <h3 style="font-size: 1.2rem; margin-bottom: 1rem; color: var(--text);">Selected Publications</h3>
+                
                 <div class="publication">
                     <div class="pub-title">
                         Quantum Inspired Chaotic Salp Swarm Optimization for Dynamic Optimization
                     </div>
-                    <div class="pub-journal">The Computer Science Journal, AGH University, Poland</div>
-                    <div class="pub-meta">2024</div>
+                    <div class="pub-venue">The Computer Science Journal, AGH University, Poland</div>
+                    <div class="pub-meta">2024 | Quantum-inspired algorithms for complex optimization</div>
                 </div>
+                
                 <div class="publication">
                     <div class="pub-title">
-                        A Cooperative Hybrid Quantum-Inspired Salp Swarm and Differential Evolution for Solving 
-                        CEC 2022 Benchmark and Controller Placement Problems in Software Defined Networks
+                        A Cooperative Hybrid Quantum-Inspired Salp Swarm and Differential Evolution for 
+                        Solving CEC 2022 Benchmark and Controller Placement in Software Defined Networks
                     </div>
-                    <div class="pub-journal">IEEE Access</div>
-                    <div class="pub-meta">2024</div>
+                    <div class="pub-venue">IEEE Access</div>
+                    <div class="pub-meta">2024 | Hybrid optimization for SDN controller placement</div>
                 </div>
+                
                 <div class="publication">
                     <div class="pub-title">
                         Advanced Swarm Intelligence Algorithms for Complex Optimization Problems in 
                         Software-Defined Vehicular Networks
                     </div>
-                    <div class="pub-journal">PhD Dissertation, Amity University</div>
-                    <div class="pub-meta">2023</div>
+                    <div class="pub-venue">PhD Dissertation, Amity University</div>
+                    <div class="pub-meta">2023 | QESSO, SA-SSO, MMQSSA algorithms</div>
                 </div>
+                
                 <div class="publication">
                     <div class="pub-title">
                         Swarm Intelligence and Optimization for Multimodal Problems
                     </div>
-                    <div class="pub-journal">Presented at IEEE INDICON 2024, IIT Kharagpur</div>
-                    <div class="pub-meta">2024</div>
+                    <div class="pub-venue">IEEE INDICON 2024, IIT Kharagpur (Presented)</div>
+                    <div class="pub-meta">2024 | Conference presentation</div>
                 </div>
             </div>
-            <div style="text-align: center; margin-top: 2.5rem;">
-                <a href="https://scholar.google.com/citations?user=hkGVZXIAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="btn">
-                    View All Publications
+        </section>
+        
+        <!-- Professional Profiles -->
+        <section class="section">
+            <h2 class="section-title">
+                <span class="section-icon">🌐</span>
+                Professional Network
+            </h2>
+            <div class="links-grid">
+                <a href="https://www.linkedin.com/in/sanjai-pathak/" target="_blank" class="link-card">
+                    <div class="link-icon">💼</div>
+                    <div class="link-content">
+                        <div class="link-title">LinkedIn</div>
+                        <div class="link-desc">Professional updates & thought leadership</div>
+                    </div>
+                </a>
+                
+                <a href="https://medium.com/@pathak.sanjai" target="_blank" class="link-card">
+                    <div class="link-icon">✍️</div>
+                    <div class="link-content">
+                        <div class="link-title">Medium Blog</div>
+                        <div class="link-desc">Articles on AI, leadership & innovation</div>
+                    </div>
+                </a>
+                
+                <a href="https://github.com/" target="_blank" class="link-card">
+                    <div class="link-icon">💻</div>
+                    <div class="link-content">
+                        <div class="link-title">GitHub</div>
+                        <div class="link-desc">Research code & implementations</div>
+                    </div>
                 </a>
             </div>
         </section>
-
-        <!-- Writing -->
-        <section id="writing">
-            <h2 class="section-title">Writing</h2>
-            <div class="writing-list">
-                <div class="article">
-                    <h3>Unleashing Business Value Through C64 Stack</h3>
-                    <p class="article-excerpt">
-                        From data chaos to intelligent context: how DCH and M4AI enable explainable, 
-                        AI-driven business intelligence in engineering organizations.
-                    </p>
-                    <a href="https://medium.com/@pathak.sanjai/unleashing-business-value-through-c64-stack-dch-m4ai-a-strategic-leaders-perspective-9d1cbd8646a1" target="_blank" rel="noopener noreferrer" class="read-link">Read on Medium →</a>
+        
+        <!-- Featured Writing -->
+        <section class="section">
+            <h2 class="section-title">
+                <span class="section-icon">📝</span>
+                Featured Writing
+            </h2>
+            
+            <a href="https://medium.com/@pathak.sanjai/unleashing-business-value-through-c64-stack-dch-m4ai-a-strategic-leaders-perspective-9d1cbd8646a1" target="_blank" class="article-card">
+                <div class="article-title">Unleashing Business Value Through C64 Stack: DCH & M4AI</div>
+                <div class="article-excerpt">
+                    From data chaos to intelligent context: How DCH and M4AI enable explainable, AI-driven 
+                    business intelligence in engineering organizations. A strategic leader's perspective on 
+                    transforming disconnected data into actionable insights.
                 </div>
-                <div class="article">
-                    <h3>Co-Innovation Between India and Global Partners</h3>
-                    <p class="article-excerpt">
-                        Exploring how India can transform from execution partner to strategic co-innovation 
-                        author in global R&D ecosystems.
-                    </p>
-                    <a href="https://medium.com/@pathak.sanjai" target="_blank" rel="noopener noreferrer" class="read-link">Read on Medium →</a>
+                <div class="read-more">Read on Medium →</div>
+            </a>
+            
+            <a href="https://medium.com/@pathak.sanjai" target="_blank" class="article-card">
+                <div class="article-title">Build With India: Redefining Global R&D Partnerships</div>
+                <div class="article-excerpt">
+                    Exploring the transformation from "Build in India" to "Build with India" — how strategic 
+                    co-innovation partnerships are reshaping global technology collaboration and India's role 
+                    in the innovation ecosystem.
                 </div>
-                <div class="article">
-                    <h3>Cross-Cultural Engineering Leadership</h3>
-                    <p class="article-excerpt">
-                        Lessons from building teams that balance German precision with Indian agility 
-                        in automotive electronics development.
-                    </p>
-                    <a href="https://medium.com/@pathak.sanjai" target="_blank" rel="noopener noreferrer" class="read-link">Read on Medium →</a>
+                <div class="read-more">Read on Medium →</div>
+            </a>
+            
+            <a href="https://medium.com/@pathak.sanjai" target="_blank" class="article-card">
+                <div class="article-title">Cross-Cultural Engineering Leadership at Scale</div>
+                <div class="article-excerpt">
+                    Lessons from leading 150+ engineers across three continents. Balancing German precision 
+                    with Indian agility in automotive electronics development. What works, what doesn't, 
+                    and why culture matters more than process.
+                </div>
+                <div class="read-more">Read on Medium →</div>
+            </a>
+        </section>
+        
+        <!-- Key Experience -->
+        <section class="section">
+            <h2 class="section-title">
+                <span class="section-icon">🏢</span>
+                Career Highlights
+            </h2>
+            
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="experience-title">R&D Manager, In-Vehicle Electronics</div>
+                    <div class="experience-period">2020 - 2024</div>
+                </div>
+                <div class="experience-company">Faurecia Clarion Electronics (Forvia)</div>
+                <div class="experience-desc">
+                    Led 150+ engineers managing €75M business across cockpit electronics, ADAS, displays, 
+                    and infotainment. Reduced system errors 30%, improved performance 25%. Pioneered 
+                    Advanced Software Development and System Engineering teams. Increased customer 
+                    satisfaction 50%.
+                </div>
+            </div>
+            
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="experience-title">Group Project Manager</div>
+                    <div class="experience-period">2018 - 2020</div>
+                </div>
+                <div class="experience-company">KPIT Technologies</div>
+                <div class="experience-desc">
+                    Led India-USA engineering teams developing automotive tools (PCL, FCA, Chameleon, 
+                    Calterm). Consistently achieved highest customer satisfaction ratings across T&M and 
+                    Fixed Cost projects.
+                </div>
+            </div>
+            
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="experience-title">Technical Manager</div>
+                    <div class="experience-period">2011 - 2018</div>
+                </div>
+                <div class="experience-company">HCL Technologies</div>
+                <div class="experience-desc">
+                    Designed complete battery management systems for professional cameras. Implemented 
+                    Agile methodologies, introduced pair programming reducing defect density 12%. Led 
+                    bridge engineering for Japan region.
                 </div>
             </div>
         </section>
-
+        
         <!-- Contact -->
-        <section id="contact">
-            <h2 class="section-title">Contact</h2>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Ccircle fill='%232c5f6f' cx='50' cy='50' r='50'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='32' fill='%23fff' font-weight='600'%3ESP%3C/text%3E%3C/svg%3E" alt="Sanjai Pathak" class="contact-photo" width="100" height="100" loading="lazy">
-                    
-                    <h3>Let me help</h3>
-                    <p class="contact-message">
-                        If you're interested in collaboration or have questions about my research, 
-                        please don't hesitate to reach out.
-                    </p>
-                    
-                    <div class="contact-detail">Sanjai Pathak</div>
-                    <div class="contact-detail">Pune, Maharashtra, India</div>
-                    <div class="contact-detail" style="margin-top: 1rem;">
-                        <a href="mailto:pathak.sanjai@gmail.com" style="color: var(--accent); text-decoration: none;">pathak.sanjai@gmail.com</a>
-                    </div>
-
-                    <div class="social-links">
-                        <a href="mailto:pathak.sanjai@gmail.com" class="social-link" title="Email" aria-label="Email">✉</a>
-                        <a href="https://www.linkedin.com/in/sanjai-pathak/" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn" aria-label="LinkedIn">in</a>
-                        <a href="https://scholar.google.com/citations?user=hkGVZXIAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="social-link" title="Google Scholar" aria-label="Google Scholar">🎓</a>
-                        <a href="https://medium.com/@pathak.sanjai" target="_blank" rel="noopener noreferrer" class="social-link" title="Medium" aria-label="Medium">M</a>
-                    </div>
-                </div>
-
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">Send Message</button>
-                    </form>
-                    <div id="formStatus"></div>
-                </div>
-            </div>
+        <section class="contact-section">
+            <h2>Let's Connect</h2>
+            <p class="contact-text">
+                Open to conversations about AI in automotive, engineering leadership, 
+                cross-continental collaboration, and building with India.
+            </p>
+            <a href="mailto:pathak.sanjai@gmail.com" class="contact-email">pathak.sanjai@gmail.com</a>
+            <div style="margin-top: 1.5rem; opacity: 0.9;">Pune, Maharashtra, India</div>
         </section>
-
-        <!-- Footer -->
+        
         <footer>
             <p>© 2025 Sanjai Pathak. All rights reserved.</p>
+            <p style="margin-top: 0.5rem;">PhD (Information Technology) | Amity University | Advisory Board Member</p>
         </footer>
-    </main>
-
-    <script>
-        // Theme toggle
-        function toggleTheme() {
-            const body = document.body;
-            const current = body.getAttribute('data-theme') || 'light';
-            const next = current === 'light' ? 'dark' : 'light';
-            body.setAttribute('data-theme', next);
-            localStorage.setItem('site-theme', next);
-        }
-
-        // Initialize
-        document.addEventListener('DOMContentLoaded', () => {
-            // Load saved theme
-            const saved = localStorage.getItem('site-theme');
-            if (saved) document.body.setAttribute('data-theme', saved);
-
-            // Mobile nav toggle
-            const navToggle = document.getElementById('navToggle');
-            const mobileNav = document.getElementById('mobileNav');
-            navToggle.addEventListener('click', () => {
-                const isVisible = mobileNav.style.display === 'block';
-                mobileNav.style.display = isVisible ? 'none' : 'block';
-                navToggle.setAttribute('aria-expanded', String(!isVisible));
-            });
-
-            // Smooth scroll
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        window.scrollTo({
-                            top: target.offsetTop - 100,
-                            behavior: 'smooth'
-                        });
-                        // Close mobile nav
-                        mobileNav.style.display = 'none';
-                    }
-                });
-            });
-
-            // Form submission
-            const form = document.getElementById('contactForm');
-            const status = document.getElementById('formStatus');
-            
-            form.addEventListener('submit', (e) => {
-                e.preventDefault();
-                const formData = new FormData(form);
-                const subject = encodeURIComponent(formData.get('subject'));
-                const body = encodeURIComponent(
-                    `Name: ${formData.get('name')}\nEmail: ${formData.get('email')}\n\nMessage:\n${formData.get('message')}`
-                );
-                window.location.href = `mailto:pathak.sanjai@gmail.com?subject=${subject}&body=${body}`;
-                status.textContent = 'Opening your email client...';
-                status.style.color = 'var(--accent)';
-                setTimeout(() => {
-                    form.reset();
-                    status.textContent = '';
-                }, 3000);
-            });
-        });
-    </script>
+    </div>
 </body>
 </html>
